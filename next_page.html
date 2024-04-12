@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+    <style>
+        /* Overall styling */
+        body {
+            background-color: #f8f9fa; /* Light grey background */
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ40Od9YFhTeLrFx0hkYGYUNSyacUL41NIsxw&usqp=CAU');
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Dress item container */
+        .dress-item {
+            display: inline-block;
+            margin: 15px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 20%;
+            transition: transform 0.3s ease;
+            opacity: 0.8;
+        }
+
+        /* Dress item hover effect */
+        .dress-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            opacity: 1;
+        }
+
+        /* Dress item heading */
+        .dress-item h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Dress item image */
+        .dress-item img {
+            width: 80%; /* Adjust width as per requirement */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Buy button styling */
+        .buy-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6f61; /* Coral color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Buy button hover effect */
+        .buy-button:hover {
+            background-color: #ff4b47; /* Darker coral */
+        }
+
+        /* Next button styling */
+        .next-button {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #28a745; /* Green color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Next button hover effect */
+        .next-button:hover {
+            background-color: #218838; /* Darker green */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dress-item">
+        <h2>Sarees</h2>
+        <img src="https://vivaahasilks.com/cdn/shop/collections/AMB250800601-scaled.jpg?v=1709791504" alt="Saree">
+        <button class="buy-button">Buy</button>
+    </div>
+
+    <div class="dress-item">
+        <h2>Kurtas</h2>
+        <img src="C:/Users/Jaya2/OneDrive/Documents/images/kurthi.webp" alt="Kurtha">
+        <button class="buy-button">Buy</button>
+    </div>
+
+    <div class="dress-item">
+        <h2>Kids Wear</h2>
+        <img src="C:/Users/Jaya2/OneDrive/Documents/images/kids.jpg" alt="Kids Wear">
+        <button class="buy-button">Buy</button>
+    </div>
+
+    <div class="dress-item">
+        <h2>Men's Wear</h2>
+        <img src="C:/Users/Jaya2/OneDrive/Documents/images/mens.jpg" alt="Men's Wear">
+        <button class="buy-button">Buy</button>
+    </div>
+
+    <button class="next-button" onclick="nextPage();">Next</button>
+
+    <script>
+        function nextPage() {
+            window.location.href = 'user_info.html';
+        }
+    </script>
+
+</body>
+
+</html>

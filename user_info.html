@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Information</title>
+    <style>
+        /* Overall body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5; /* Light background color */
+            background-image:url('https://singhanias.in/cdn/shop/articles/24ad5f62a2da3c074a99dcb7aca23ce0.jpg?v=1668085179');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Form container styling */
+        .form-container {
+            width: 50%;
+            max-width: 500px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left; /* Align inputs to the left */
+	    opacity : 0.8;
+        }
+
+        /* Form elements styling */
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            width: 90%; /* Slightly smaller width */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s;
+            display: block; /* Ensure each input takes up the full width */
+            opacity: 0.8; /* Decrease opacity to 0.8 */
+        }
+
+        /* Form elements focus effect */
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        textarea:focus {
+            border-color: #008cba; /* Highlighted border color */
+            opacity: 1; /* Restore full opacity on focus */
+        }
+
+        /* Submit button styling */
+        .submit-button {
+            background-color: #008cba;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        /* Submit button hover effect */
+        .submit-button:hover {
+            background-color: #006a8e; /* Darker blue on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2 style="font-size: 28px; color: #333;">User Information</h2>
+
+        <form id="user-form" onsubmit="return validateForm();">
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your user name" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your address"></textarea>
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript validation function
+        function validateForm() {
+            var form = document.getElementById('user-form');
+            var username = document.getElementById('username').value;
+            var password = document.getElement_id="password"().value;
+
+            // Check if required fields are filled
+            if (username === '' || password === '') {
+                alert('Please fill in the required fields.');
+                return false;
+            }
+
+            // Redirect to the thank you page if validation passes
+            window.location.href = 'thankyou_page.html';
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>
